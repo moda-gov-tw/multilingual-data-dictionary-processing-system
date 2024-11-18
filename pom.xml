@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.iisigroup</groupId>
-    <artifactId>chinese-word-comparator</artifactId>
+    <artifactId>multilingual-data-dictionary-processing-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>chinese-word-comparator</name>
-    <description>chinese-word-comparator</description>
+    <name>multilingual-data-dictionary-processing-system</name>
+    <description>multilingual-data-dictionary-processing-system</description>
     <url/>
     <licenses>
         <license/>
@@ -62,6 +62,27 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-third-party</id>
+                        <goals>
+                            <goal>add-third-party</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
